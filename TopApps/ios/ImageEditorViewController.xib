@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageEditorViewController" customModule="ImagePicker" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelBtn" destination="6Qi-EM-DeF" id="zy8-jS-vgd"/>
+                <outlet property="chooseBtn" destination="QYM-em-QBt" id="fFH-SZ-oL3"/>
+                <outlet property="imageView" destination="N6e-bx-Laz" id="t9i-O8-ESq"/>
+                <outlet property="imageViewBottomConstraint" destination="lse-KJ-KeE" id="1e2-90-Fsv"/>
+                <outlet property="imageViewLeadingConstraint" destination="eP0-4B-xxh" id="J43-77-RCa"/>
+                <outlet property="imageViewTopConstraint" destination="gnA-pa-Cxe" id="VUp-pC-wkg"/>
+                <outlet property="imageViewTrailingConstraint" destination="s2g-gG-jhH" id="YM8-Oy-y4B"/>
+                <outlet property="maskView" destination="Ysh-Hl-IZ5" id="SLR-We-ROa"/>
+                <outlet property="moveandscale" destination="25P-UQ-N57" id="Xja-z4-2AO"/>
+                <outlet property="scrollView" destination="wEf-f6-51z" id="Z7Q-Km-Uxv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="UIScrollView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="wEf-f6-51z">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N6e-bx-Laz">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="N6e-bx-Laz" firstAttribute="centerX" secondItem="wEf-f6-51z" secondAttribute="centerX" id="61h-3d-x5f"/>
+                        <constraint firstItem="N6e-bx-Laz" firstAttribute="centerY" secondItem="wEf-f6-51z" secondAttribute="centerY" id="Z8k-If-dms"/>
+                        <constraint firstItem="N6e-bx-Laz" firstAttribute="leading" secondItem="wEf-f6-51z" secondAttribute="leading" id="eP0-4B-xxh"/>
+                        <constraint firstItem="N6e-bx-Laz" firstAttribute="top" secondItem="wEf-f6-51z" secondAttribute="top" id="gnA-pa-Cxe"/>
+                        <constraint firstAttribute="bottom" secondItem="N6e-bx-Laz" secondAttribute="bottom" id="lse-KJ-KeE"/>
+                        <constraint firstAttribute="trailing" secondItem="N6e-bx-Laz" secondAttribute="trailing" id="s2g-gG-jhH"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="lUB-za-pRP"/>
+                    </connections>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ysh-Hl-IZ5" customClass="OverLayView" customModule="ImagePicker" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move and Scale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25P-UQ-N57">
+                            <rect key="frame" x="126.5" y="20" width="123.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Qi-EM-DeF">
+                            <rect key="frame" x="10" y="617" width="49" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYM-em-QBt">
+                            <rect key="frame" x="305" y="534" width="60" height="33"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <state key="normal" title="Choose">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="chooseAction:" destination="-1" eventType="touchUpInside" id="3dc-rm-eCT"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="25P-UQ-N57" firstAttribute="top" secondItem="Ysh-Hl-IZ5" secondAttribute="top" constant="20" id="9OT-BE-ztx"/>
+                        <constraint firstItem="25P-UQ-N57" firstAttribute="centerX" secondItem="Ysh-Hl-IZ5" secondAttribute="centerX" id="FeD-3i-Khq"/>
+                        <constraint firstAttribute="bottom" secondItem="QYM-em-QBt" secondAttribute="bottom" constant="100" id="pzx-y6-5Jt"/>
+                        <constraint firstAttribute="trailing" secondItem="QYM-em-QBt" secondAttribute="trailing" constant="10" id="yft-mm-601"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ysh-Hl-IZ5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CAN-FU-NOJ"/>
+                <constraint firstItem="Ysh-Hl-IZ5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="N2d-3n-eSN"/>
+                <constraint firstItem="Ysh-Hl-IZ5" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="Qnf-6q-bRE"/>
+                <constraint firstItem="wEf-f6-51z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VL0-qr-1nu"/>
+                <constraint firstItem="wEf-f6-51z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="e6t-Ci-9Of"/>
+                <constraint firstItem="Ysh-Hl-IZ5" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="mSs-nd-1ou"/>
+                <constraint firstItem="wEf-f6-51z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pib-ND-uqr"/>
+                <constraint firstItem="wEf-f6-51z" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="q0U-Jr-0wC"/>
+                <constraint firstItem="Ysh-Hl-IZ5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wqJ-lN-Hjc"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
