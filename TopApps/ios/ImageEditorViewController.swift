@@ -3,7 +3,7 @@
 //  ImagePicker
 //
 //  Created by johnson mathew on 11/6/17.
-//  Copyright © 2017 Western Union. All rights reserved.
+//  Copyright © 2017 . All rights reserved.
 //
 
 import UIKit
