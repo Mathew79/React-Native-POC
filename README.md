@@ -4,7 +4,7 @@
 A simple app that fetches top App Store apps and displays them in a FlatList.
 
 
-# How to run apps
+# How to run.
 
 1. Clone this repo.
 2. Run npm install.
